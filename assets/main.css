@@ -1,0 +1,91 @@
+body,
+html{
+  font-size: 12px;
+  font-family: 'Arial', sans-serif;
+  background-color: #fff;
+  color: #000;
+}
+
+body{
+  margin: 4rem;
+  line-height: 1.3;
+}
+
+header{
+  display: flex;
+  align-items: center;
+}
+
+input{
+  background-color: transparent;
+  border: none;
+  width: 10rem;
+  border-bottom: 1px solid;
+  color: #000;
+  outline: none; 
+}
+
+#newsletter_signup_container{
+  margin-bottom: 1rem;
+  margin-left: 2rem;
+}
+
+#logo{
+  width: 30rem;
+  margin-bottom: 1rem;
+}
+
+#catalogue{
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid;
+  width: 60rem;
+  border-radius: 1rem;
+  box-sizing: border-box;
+}
+
+.heading_container.row{
+  border-bottom: 1px solid;
+}
+
+.row{
+  display: flex;
+  width: 100%;
+  border-bottom: 1px dashed;
+}
+
+.row:last-child{
+  border-bottom: none;
+}
+
+.border_right{
+  border-right: 1px solid;  
+}
+
+.cell{
+  padding: 1rem;
+}
+
+.vol{
+  width: 7%;
+  box-sizing: border-box;
+}
+
+.title{
+  width: 20%;
+}
+
+.w{
+  width: 7.5%;
+}
+
+.tracklist{
+  width: 40%;
+}
+
+.download{
+  width: 10%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
