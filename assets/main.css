@@ -54,6 +54,10 @@ input{
   border-bottom: 1px dashed;
 }
 
+.row:nth-child(odd):not(.heading_container){
+  background-color: #eee;
+}
+
 .row:last-child{
   border-bottom: none;
 }
