@@ -13,6 +13,7 @@ body{
 
 header{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   margin-bottom: 2rem;
 }
@@ -121,5 +122,58 @@ input[type="submit"]:focus{
   input[type="submit"]:hover{
     background-color: #000;
     color: #fff;
+  }
+}
+
+@media (max-width: 1000px){
+  .w{
+    display: none;
+  }
+  .download{
+    width: 10%;
+  } 
+}
+
+@media (max-width: 870px){
+  #newsletter_signup_container{
+    margin-top: 2rem;
+    margin-left: 0;
+    margin-right: 4rem;
+  }
+}
+
+@media (max-width: 767px){
+  body{
+    margin: 1rem;
+  }
+  .tracklist{
+    display: none;
+  }
+
+  .vol{
+    width: 20%;
+  }
+
+  .title{
+    width: 55%;
+  }
+
+  .download{
+    width: 25%;
+  } 
+}
+
+@media (max-width: 450px){
+  #newsletter_signup_container,
+  #about{
+    width: 100%;
+    margin-top: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .clear{
+    display: block;
+    margin-top: 1rem;
+    width: 100%;
   }
 }
