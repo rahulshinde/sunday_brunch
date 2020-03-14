@@ -1,7 +1,7 @@
 body,
 html{
   font-size: 12px;
-  font-family: 'Arial', sans-serif;
+  font-family: monospace;
   background-color: #fff;
   color: #000;
 }
@@ -14,6 +14,7 @@ body{
 header{
   display: flex;
   align-items: center;
+  margin-bottom: 2rem;
 }
 
 input{
@@ -22,30 +23,47 @@ input{
   width: 10rem;
   border-bottom: 1px solid;
   color: #000;
+  font-family: monospace;
   outline: none; 
 }
 
+input[type="submit"]{
+  border: 1px solid;
+  cursor: pointer;
+}
+
+input[type="submit"]:focus{
+  background-color: #000;
+  color: #fff;
+}
+
+#about{
+  width: 16rem;
+  margin-left: 4rem;
+}
+
 #newsletter_signup_container{
-  margin-bottom: 1rem;
-  margin-left: 2rem;
+  margin-left: 4rem;
 }
 
 #logo{
-  width: 30rem;
-  margin-bottom: 1rem;
+  width: 15rem;
 }
 
 #catalogue{
   display: flex;
   flex-wrap: wrap;
   border: 1px solid;
-  width: 60rem;
+  width: 100%;
   border-radius: 1rem;
   box-sizing: border-box;
 }
 
 .heading_container.row{
-  border-bottom: 1px solid;
+  background-color: #f00;
+  color: #fff;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
 }
 
 .row{
@@ -55,7 +73,7 @@ input{
 }
 
 .row:nth-child(odd):not(.heading_container){
-  background-color: #eee;
+  background-color: rgba(255, 255, 0, 0.25);
 }
 
 .row:last-child{
@@ -64,6 +82,7 @@ input{
 
 .border_right{
   border-right: 1px solid;  
+  box-sizing: border-box;
 }
 
 .cell{
@@ -80,7 +99,7 @@ input{
 }
 
 .w{
-  width: 7.5%;
+  width: 15%;
 }
 
 .tracklist{
@@ -88,8 +107,19 @@ input{
 }
 
 .download{
-  width: 10%;
+  width: 7%;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
+.mc-field-group,
+.clear{
+  display: inline-block;
+}
+
+@media (hover: hover){
+  input[type="submit"]:hover{
+    background-color: #000;
+    color: #fff;
+  }
+}
