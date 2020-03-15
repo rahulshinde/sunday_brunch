@@ -90,6 +90,8 @@ input[type="submit"]:focus{
 
 .cell{
   padding: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .vol{
@@ -111,8 +113,6 @@ input[type="submit"]:focus{
 
 .download{
   width: 7%;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .mc-field-group,
