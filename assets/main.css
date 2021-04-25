@@ -18,7 +18,7 @@ header{
   margin-bottom: 2rem;
   width: 100%;
   justify-content: space-between;
-  z-index: 9;
+  z-index: 10;
 }
 
 main{
@@ -35,8 +35,9 @@ input{
   color: #000;
   font-family: monospace;
   outline: none; 
-  border-radius: none;
-  -webkit-border-radius: none;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -webkit-appearance: none;
 }
 
 input[type="submit"]{
@@ -59,7 +60,7 @@ input[type="submit"]:focus{
   top: 12rem;
   left: 25%;
   overflow: hidden;
-  z-index: -10;
+  z-index: 1;
   border-radius: 2rem;
   background-color: #0f0;
 }
@@ -251,13 +252,42 @@ input[type="submit"]:focus{
 }
 
 @media (max-width: 767px){
+  html{
+    font-size: 3.5vw; 
+  }
   body{
     margin: 2rem;
   }
   header{
-    position: static;
     width: 100%;
     max-height: none;
+    font-weight: 800;
+    color: white;
+    font-size: 1.5rem;
+    mix-blend-mode: difference;
+  }
+  header input{
+    color: white;
+    width: 9rem;
+  }
+  input[type="submit"]{
+    border: 1px solid #fff;
+    font-size: 1.5rem;
+    font-weight: 800;
+  }
+
+  input[type="submit"]:focus{
+    background-color: #fff;
+    color: #000;
+    font-size: 1.5rem;
+  }
+  #image_section{
+    top: 10rem;
+    left: 1rem;
+    width: calc(100% - 2rem);
+  }
+  #logo{
+    width: 100%;
   }
   .tracklist{
     display: none;
