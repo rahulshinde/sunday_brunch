@@ -99,6 +99,7 @@ input[type="submit"]:focus{
 
 #logo{
   height: 9rem;
+  filter: drop-shadow(2px 2px 0 #000);
 }
 
 #currently{
