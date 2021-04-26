@@ -274,17 +274,23 @@ input[type="submit"]:focus{
     -webkit-mix-blend-mode: difference;
     z-index: 10;
   }
+  #newsletter_signup_container{
+    margin-top: 2rem;
+    margin-left: 0;
+    margin-right: 0;
+  }
   #logo{
     margin-bottom: 2rem;  
   }
   header input{
     color: white;
-    width: 9rem;
+    width: 100%;
   }
   input[type="submit"]{
     border: 1px solid #fff;
     font-size: 1.5rem;
     font-weight: 800;
+    margin-top: 1rem;
   }
 
   input[type="submit"]:focus{
