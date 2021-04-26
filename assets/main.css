@@ -63,6 +63,11 @@ input[type="submit"]:focus{
   z-index: 1;
   border-radius: 2rem;
   background-color: #0f0;
+  cursor: url('mouse_small.png'), auto;
+  cursor: -webkit-image-set(
+    url('mouse_small.png') 1x,
+    url('mouse_large.png') 2x
+  ), auto;
 }
 
 #image_section:after{
