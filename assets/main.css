@@ -263,17 +263,21 @@ input[type="submit"]:focus{
     margin: 2rem;
   }
   main{
-    margin-top: 20rem;
+    margin-top: 2rem;
   }
   header{
     width: 100%;
     max-height: none;
+    position: relative;
     font-weight: 800;
     color: white;
     font-size: 1.5rem;
     mix-blend-mode: difference;
     -webkit-mix-blend-mode: difference;
     z-index: 10;
+  }
+  #logo{
+    margin-bottom: 2rem;
   }
   header input{
     color: white;
@@ -291,9 +295,11 @@ input[type="submit"]:focus{
     font-size: 1.5rem;
   }
   #image_section{
-    top: 10rem;
-    left: 2rem;
-    width: calc(100% - 4rem);
+    position: sticky;
+    top: 2rem;
+    margin-top: 6rem;
+    margin-left: 0;
+    width: calc(100%);
     height: calc(100vh - 12rem);
     z-index: 1;
   }
