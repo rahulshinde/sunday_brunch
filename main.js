@@ -32,7 +32,7 @@ function startSlideshow(){
 		}
 		document.querySelector(".slideshow_image.current").classList.remove('current');
 		document.querySelectorAll(".slideshow_image")[current].classList.add('current');;
-	}, 3000);
+	}, 6000);
 }
 
 function resizeHandler(){

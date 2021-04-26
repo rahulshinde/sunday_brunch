@@ -62,11 +62,6 @@ input[type="submit"]:focus{
   z-index: 1;
   border-radius: 2rem;
   background-color: #0f0;
-  cursor: url('mouse_small.png') , auto;
-  cursor: -webkit-image-set(
-    url('mouse_small.png') 1x,
-    url('mouse_large.png') 2x 
-  ), auto;
 }
 
 #image_section:after{
@@ -84,6 +79,7 @@ input[type="submit"]:focus{
   position: relative;
   width: 100%;
   height: 100%;
+  transition: transform steps(3, end) 0.05s;
 }
 
 .slideshow_image{
@@ -96,6 +92,8 @@ input[type="submit"]:focus{
   transform: translate(-50%, -50%);
   opacity: 0;
   image-rendering: pixelated;
+  transition: opacity steps(6, end) 2s;
+  mix-blend-mode: difference;
 }
 
 .slideshow_image.current{
@@ -277,7 +275,7 @@ input[type="submit"]:focus{
     z-index: 10;
   }
   #logo{
-    margin-bottom: 2rem;
+    margin-bottom: 2rem;  
   }
   header input{
     color: white;
