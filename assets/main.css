@@ -287,9 +287,13 @@ input[type="submit"]:focus{
   }
   #image_section{
     top: 10rem;
-    left: 1rem;
-    width: calc(100% - 2rem);
+    left: 2rem;
+    width: calc(100% - 4rem);
     height: calc(100vh - 12rem);
+  }
+  .slideshow_image{
+    width: 80%;
+    height: 80%;
   }
   #logo{
     width: 100%;
