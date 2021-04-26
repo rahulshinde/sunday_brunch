@@ -262,6 +262,9 @@ input[type="submit"]:focus{
   body{
     margin: 2rem;
   }
+  main{
+    margin-top: 20rem;
+  }
   header{
     width: 100%;
     max-height: none;
@@ -269,6 +272,8 @@ input[type="submit"]:focus{
     color: white;
     font-size: 1.5rem;
     mix-blend-mode: difference;
+    -webkit-mix-blend-mode: difference;
+    z-index: 10;
   }
   header input{
     color: white;
@@ -290,6 +295,7 @@ input[type="submit"]:focus{
     left: 2rem;
     width: calc(100% - 4rem);
     height: calc(100vh - 12rem);
+    z-index: 1;
   }
   .slideshow_image{
     width: 80%;
