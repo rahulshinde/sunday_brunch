@@ -265,6 +265,7 @@ input[type="submit"]:focus{
   }
   header{
     width: 100%;
+    top: auto;
     max-height: none;
     position: relative;
     z-index: 10;
@@ -280,7 +281,8 @@ input[type="submit"]:focus{
   #mc_embed_signup{
     margin-top: 1rem;
   }
-  header input{
+  header input,
+  .mc-field-group{
     width: 100%;
   }
   input[type="submit"]{
