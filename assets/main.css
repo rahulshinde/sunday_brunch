@@ -56,7 +56,6 @@ input[type="submit"]:focus{
   position: fixed;
   width: 50%;
   height: calc(100vh - 24rem);
-  transform: translateZ(1px);
   top: 12rem;
   left: 25%;
   overflow: hidden;
@@ -290,6 +289,7 @@ input[type="submit"]:focus{
     top: 10rem;
     left: 1rem;
     width: calc(100% - 2rem);
+    height: calc(100vh - 12rem);
   }
   #logo{
     width: 100%;
