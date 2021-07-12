@@ -12,8 +12,6 @@ body{
 
 header{
   display: flex;
-  position: sticky;
-  top: 2rem;
   align-items: center;
   margin-bottom: 2rem;
   width: 100%;
@@ -24,7 +22,6 @@ header{
 main{
   position: relative;
   z-index: 10;
-  margin-top: calc(100vh - 20rem);
 }
 
 input{
@@ -52,52 +49,13 @@ input[type="submit"]:focus{
   color: #fff;
 }
 
-#image_section{
-  position: fixed;
-  width: 50%;
-  height: calc(100vh - 24rem);
-  top: 12rem;
-  left: 25%;
-  overflow: hidden;
-  z-index: 1;
-  border-radius: 2rem;
-  background-color: #0f0;
-}
-
-#image_section:after{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  box-shadow: inset 1rem 1rem 1rem #000;
-  border-radius: 2rem;
-}
-
-#slideshow_inner_container{
-  position: relative;
+.current{
   width: 100%;
-  height: 100%;
-  transition: transform steps(3, end) 0.05s;
-}
-
-.slideshow_image{
-  position: absolute;
-  width: 150%;
-  height: 150%;
-  object-fit: contain;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0;
-  image-rendering: pixelated;
-  transition: opacity steps(6, end) 2s;
-  mix-blend-mode: difference;
-}
-
-.slideshow_image.current{
-  opacity: 1;
+  height: 50vh;
+  background: url("../assets/current/full_length.jpg");
+  background-size: 20%;
+  background-position: center;
+  margin-bottom: 2rem;
 }
 
 #logo{
@@ -243,6 +201,9 @@ input[type="submit"]:focus{
   input{
     width: 9rem;
   }
+  .current{
+    background-size: contain;
+  }
 }
 
 @media (max-width: 870px){
@@ -293,20 +254,6 @@ input[type="submit"]:focus{
   input[type="submit"]:focus{
     background-color: #fff;
     color: #000;
-  }
-  #image_section{
-    position: relative;
-    top: 0;
-    left: 0;
-    margin-top: 6rem;
-    margin-left: 0;
-    width: calc(100%);
-    height: calc(100vh - 12rem);
-    z-index: 1;
-  }
-  .slideshow_image{
-    width: 80%;
-    height: 80%;
   }
   #logo{
     width: 100%;
