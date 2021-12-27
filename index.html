@@ -24,6 +24,18 @@
   <meta name="theme-color" content="#ffffff">
 
   <link rel="stylesheet" type="text/css" href="assets/main.css">
+
+  <script type="text/javascript">
+    window.addEventListener("load", newletterToggle);
+
+    function newletterToggle(){
+      document.getElementById('newsletter_signup_button').addEventListener('click', showNewsletter);
+    }
+
+    function showNewsletter(e){
+      document.getElementById('newsletter_signup_outer_wrapper').classList.add('show_newsletter_signup');
+    }
+  </script>
 </head>
 <body>
   <header>
@@ -36,31 +48,41 @@
       <br>
       hmu if u wanna talk (rsubhashshinde at gmail dot com)
     </div>
-    <div id="newsletter_signup_container">
-      <div>(sign up for notifications)</div>
-      <br>
-      <div id="mc_embed_signup">
-      <form action="https://sunday-brunch.us19.list-manage.com/subscribe/post?u=f7a89decc5caf0d578ce2c297&amp;id=fc96122d44" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-          <div id="mc_embed_signup_scroll">
-      <div class="mc-field-group">
-        <label for="mce-EMAIL">Email: </label>
-        <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+    <div id="newsletter_signup_outer_wrapper">
+      <button id='newsletter_signup_button'>sign up for notifications</button>
+      <div id="newsletter_signup_container">
+        <div id="mc_embed_signup">
+        <form action="https://sunday-brunch.us19.list-manage.com/subscribe/post?u=f7a89decc5caf0d578ce2c297&amp;id=fc96122d44" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div id="mc_embed_signup_scroll">
+        <div class="mc-field-group">
+          <label for="mce-EMAIL">Email: </label>
+          <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+        </div>
+          <div id="mce-responses" class="clear">
+            <div class="response" id="mce-error-response" style="display:none"></div>
+            <div class="response" id="mce-success-response" style="display:none"></div>
+          </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f7a89decc5caf0d578ce2c297_fc96122d44" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+            </div>
+        </form>
+        </div>
+        <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
+        <!--End mc_embed_signup-->
       </div>
-        <div id="mce-responses" class="clear">
-          <div class="response" id="mce-error-response" style="display:none"></div>
-          <div class="response" id="mce-success-response" style="display:none"></div>
-        </div>    <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_f7a89decc5caf0d578ce2c297_fc96122d44" tabindex="-1" value=""></div>
-          <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-          </div>
-      </form>
-      </div>
-      <script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='ADDRESS';ftypes[3]='address';fnames[4]='PHONE';ftypes[4]='phone';fnames[5]='BIRTHDAY';ftypes[5]='birthday';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-      <!--End mc_embed_signup-->
     </div>
   </header>
 
   <main>
+
+    <section id='prompts'>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/lls27hu03yw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <img src="assets/current/prompt2.png">
+
+      <video autoplay loop playsinline muted>
+        <source src="assets/current/prompt3.mp4" type="video/mp4">
+      </video>
+    </section>
 
     <section id="catalogue">
       <div class="row heading_container">
@@ -70,6 +92,47 @@
         <span class="cell border_right w">W/</span>
         <span class="cell border_right tracklist">Tracklist/Notes</span>
         <span class="cell download">Download</span>
+      </div>
+
+      <div class="row">
+        <span class="cell border_right vol">050</span>
+        <span class="cell border_right title">EVEMIXSB</span>
+        <span class="cell border_right w">eve</span>
+        <span class="cell border_right w">...</span>
+        <span class="cell border_right tracklist">
+          • EVE BANGING CANS
+          <br>
+          • CARL STONE - SHING KEE
+          <br>
+          • RON NAGORCKA - LEMARRCOOTYA (GREY THRUSH)
+          <br>
+          • OTIS G. JOHNSON - WALK WITH JESUS 
+          <br>
+          • SKYGGE - BLACK IS THE COLOR (FEAT. PETE SEEGER)
+          <br>
+          • FRANCIS BEBEY - SANZA NOCTURNE 
+          <br>
+          • COIL - HERE TO HERE (DOUBLE HEADED SECRET)
+          <br>
+          • SOTE - HOLY ERROR 
+          <br>
+          • OLIVER COATES - FARADAY MONUMENT
+          <br>
+          • UNBE - VECTOR EGG 
+          <br>
+          • MICACHU - BIRDIES 
+          <br>
+          • TONY HYMAS - PICTURES OF DEPARTURE 
+          <br>
+          • PSYCHIC TV - JUST DRIFTING 
+          <br>
+          • ED ASKEW - TWO HANDS DANCING 
+          <br>
+          • KING TUBBY - RAMINO DUB 
+          <br>
+          • THE FREE DESIGN - KITES ARE FUN
+        </span>
+        <span class="cell download"><a href="assets/mp3/sb050.mp3" target="_blank">sb050.mp3</a></span>
       </div>
 
       <div class="row">
@@ -1193,7 +1256,6 @@
         </span>
         <span class="cell download"><a href="assets/mp3/sb001.mp3" target="_blank">sb001.mp3</a></span>
       </div>
-
     </section>
   </main>
 </body>
