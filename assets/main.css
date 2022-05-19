@@ -8,7 +8,7 @@ body{
   line-height: 1.1;
   font-family: sans-serif;
   font-weight: bold;
-  color: #000;
+  color: #00874A;
   background-size: 100%;
   background-attachment: top;
   background-position: top;
@@ -38,9 +38,24 @@ header{
   max-width: 80vw;
 }
 
+#txt{
+  position: fixed;
+  pointer-events: none;
+  mix-blend-mode: color-dodge;
+  top:  50%;
+  right:  1rem;
+  transform: translate(0, -50%);
+  max-height: 80vh;
+  max-width: 80vw;
+}
+
 main{
   position: relative;
   z-index: 10;
+}
+
+button{
+  color: #00874A;
 }
 
 input{
@@ -48,7 +63,7 @@ input{
   border: none;
   width: 10rem;
   border-bottom: 2px solid;
-  color: #000;
+  color: #00874A;
   font-family: monospace;
   font-weight: bold;
   outline: none; 
@@ -58,14 +73,14 @@ input{
 }
 
 input[type="submit"]{
-  border: 2px solid #000;
+  border: 2px solid #00874A;
   padding-bottom: 0.2rem;
   font-size: 1rem;
   cursor: pointer;
 }
 
 input[type="submit"]:focus{
-  background-color: #000;
+  background-color: #00874A;
   color: #fff;
 }
 
@@ -87,7 +102,7 @@ input[type="submit"]:focus{
   font-size: 1rem;
   font-weight: bold;
   outline:  none;
-  border:  2px solid #000;
+  border:  2px solid #00874A;
 }
 
 #about{
@@ -97,7 +112,7 @@ input[type="submit"]:focus{
 #logo{
   height: 6rem;
   margin-bottom: 2rem;
-  /*filter: drop-shadow(2px 2px 0 #000);*/
+  /*filter: drop-shadow(2px 2px 0 #00874A);*/
 }
 
 #catalogue{
@@ -122,7 +137,7 @@ input[type="submit"]:focus{
 
 .heading_container.row{
   /*background-color: #ff0;*/
-  color: #000;
+  color: #00874A;
 }
 
 .row{
@@ -176,7 +191,7 @@ input[type="submit"]:focus{
 
 @media (hover: hover){
   input[type="submit"]:hover{
-    background-color: #000;
+    background-color: #00874A;
     color: #fff;
   }
 }
@@ -213,7 +228,8 @@ input[type="submit"]:focus{
 }
 
 @media (max-width: 870px){
-  #current{
+  #current,
+  #text{
     top: 5rem;
     transform:  translate(-50%, 0%);
     
@@ -239,13 +255,13 @@ input[type="submit"]:focus{
     width: 100%;
   }
   input[type="submit"]{
-    border: 2px solid #000;
+    border: 2px solid #00874A;
     margin-top: 1rem;
   }
 
   input[type="submit"]:focus{
     background-color: #fff;
-    color: #000;
+    color: #00874A;
   }
 
   .mc-field-group,
