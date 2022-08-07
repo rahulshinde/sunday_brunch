@@ -190,10 +190,16 @@ input[type="submit"]:focus{
 
 .w{
   /*width: 15%;*/
+  display: inline-flex;
+  width: 50%;
+}
+
+.tracklist,
+.w{
+  font-size: 0.45rem;
 }
 
 .tracklist{
-  font-size: 0.45rem;
   column-count: 2;
   /*width: 40%;*/
 }
