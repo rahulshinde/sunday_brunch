@@ -1,18 +1,28 @@
+:root{
+  --bg: #333;
+  --text: #fff;
+}
+
 html{
   font-size: 0.8vw;  
 }
 
 body{
-  background-color: #ffffff;
+  background-color: var(--bg);
   margin: 4rem;
   line-height: 1.1;
   font-family: sans-serif;
   font-weight: bold;
-  color: #00874A;
+  color: var(--text);
   background-size: 100%;
   background-attachment: top;
   background-position: top;
   background-repeat: no-repeat;
+}
+
+a{
+  color: #ff0;
+  text-shadow: 2px 2px 2px var(--text);
 }
 
 header{
@@ -30,23 +40,12 @@ header{
 #current{
   position: fixed;
   pointer-events: none;
-  mix-blend-mode: hard-light;
+  mix-blend-mode: exclusion;
   top:  50%;
   left:  50%;
   transform: translate(-50%, -50%);
-  max-height: 80vh;
-  max-width: 80vw;
-}
-
-#txt{
-  position: fixed;
-  pointer-events: none;
-  mix-blend-mode: color-dodge;
-  top:  50%;
-  right:  1rem;
-  transform: translate(0, -50%);
-  max-height: 80vh;
-  max-width: 80vw;
+  height: 100vh;
+  width: 100vw;
 }
 
 main{
@@ -55,15 +54,17 @@ main{
 }
 
 button{
-  color: #00874A;
+  color: var(--text);
+  background-color: var(--bg);
 }
 
 input{
-  background-color: transparent;
+  background-color: var(--bg);
+  color: var(--text);
   border: none;
   width: 10rem;
   border-bottom: 2px solid;
-  color: #00874A;
+  color: var(--text);
   font-family: monospace;
   font-weight: bold;
   outline: none; 
@@ -73,15 +74,15 @@ input{
 }
 
 input[type="submit"]{
-  border: 2px solid #00874A;
+  border: 2px solid var(--text);
   padding-bottom: 0.2rem;
   font-size: 1rem;
   cursor: pointer;
 }
 
 input[type="submit"]:focus{
-  background-color: #00874A;
-  color: #fff;
+  background-color: var(--text);
+  color: var(--bg);
 }
 
 #newsletter_signup_container{
@@ -97,12 +98,12 @@ input[type="submit"]:focus{
 }
 
 #newsletter_signup_button{
-  background-color: #fff;
+  background-color: var(--bg);
   font-family: sans-serif;
   font-size: 1rem;
   font-weight: bold;
   outline:  none;
-  border:  2px solid #00874A;
+  border:  2px solid var(--text);
 }
 
 #about{
@@ -112,7 +113,7 @@ input[type="submit"]:focus{
 #logo{
   height: 6rem;
   margin-bottom: 2rem;
-  /*filter: drop-shadow(2px 2px 0 #00874A);*/
+  filter: drop-shadow(2px 2px 0 var(--text));
 }
 
 #catalogue{
@@ -137,7 +138,7 @@ input[type="submit"]:focus{
 
 .heading_container.row{
   /*background-color: #ff0;*/
-  color: #00874A;
+  color: var(--text);
 }
 
 .row{
@@ -191,7 +192,7 @@ input[type="submit"]:focus{
 
 @media (hover: hover){
   input[type="submit"]:hover{
-    background-color: #00874A;
+    background-color: var(--text);
     color: #fff;
   }
 }
@@ -228,9 +229,9 @@ input[type="submit"]:focus{
 }
 
 @media (max-width: 870px){
-  #current,
-  #text{
-    top: 5rem;
+  #current{
+    top: 0;
+    height: 200vw;
     transform:  translate(-50%, 0%);
     
   }
@@ -255,13 +256,13 @@ input[type="submit"]:focus{
     width: 100%;
   }
   input[type="submit"]{
-    border: 2px solid #00874A;
+    border: 2px solid var(--text);
     margin-top: 1rem;
   }
 
   input[type="submit"]:focus{
     background-color: #fff;
-    color: #00874A;
+    color: var(--text);
   }
 
   .mc-field-group,
