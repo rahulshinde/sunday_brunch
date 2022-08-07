@@ -76,6 +76,7 @@ input{
   border-bottom: 2px solid;
   color: var(--text);
   font-family: 'Raid XP', sans-serif;
+  font-size: inherit;
   outline: none; 
   border-radius: 0;
   -webkit-border-radius: 0;
