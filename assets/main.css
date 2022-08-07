@@ -3,21 +3,29 @@
   --text: #fff;
 }
 
+@font-face{
+  font-family: 'Raid XP';
+  font-weight: 400;
+  src: url("./fonts/RaidXP-Regular_web.woff2") format("woff2"),
+       url("./fonts/RaidXP-Regular_web.woff") format("woff");
+}
+
 html{
-  font-size: 0.8vw;  
+  font-size: 2vw;  
 }
 
 body{
   background-color: var(--bg);
-  margin: 4rem;
+  margin: 0rem;
   line-height: 1.1;
-  font-family: sans-serif;
+  font-family: 'Raid XP', sans-serif;
   font-weight: bold;
   color: var(--text);
   background-size: 100%;
   background-attachment: top;
   background-position: top;
   background-repeat: no-repeat;
+  text-align: left;
 }
 
 a{
@@ -28,12 +36,13 @@ a{
 header{
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin-bottom: 3rem;
-  padding: 1rem;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 0rem;
+  padding: 0.25rem;
   box-sizing: border-box;
   width: 100%;
-  justify-content: flex-start;
+  justify-content: center;
   z-index: 10;
 }
 
@@ -56,6 +65,7 @@ main{
 button{
   color: var(--text);
   background-color: var(--bg);
+  font-family: 'Raid XP', sans-serif;
 }
 
 input{
@@ -65,8 +75,7 @@ input{
   width: 10rem;
   border-bottom: 2px solid;
   color: var(--text);
-  font-family: monospace;
-  font-weight: bold;
+  font-family: 'Raid XP', sans-serif;
   outline: none; 
   border-radius: 0;
   -webkit-border-radius: 0;
@@ -75,12 +84,13 @@ input{
 
 input[type="submit"]{
   border: 2px solid var(--text);
-  padding-bottom: 0.2rem;
+  font-family: 'Raid XP', sans-serif;
   font-size: 1rem;
   cursor: pointer;
 }
 
 input[type="submit"]:focus{
+  font-family: 'Raid XP', sans-serif;
   background-color: var(--text);
   color: var(--bg);
 }
@@ -99,7 +109,7 @@ input[type="submit"]:focus{
 
 #newsletter_signup_button{
   background-color: var(--bg);
-  font-family: sans-serif;
+  font-family: 'Raid XP', sans-serif;
   font-size: 1rem;
   font-weight: bold;
   outline:  none;
@@ -107,12 +117,12 @@ input[type="submit"]:focus{
 }
 
 #about{
-  margin-bottom:  2rem;
+  margin-bottom:  0.5rem;
 }
 
 #logo{
-  height: 6rem;
-  margin-bottom: 2rem;
+  width: 100%;
+  margin-bottom: 0.5rem;
   filter: drop-shadow(2px 2px 0 var(--text));
 }
 
@@ -128,7 +138,7 @@ input[type="submit"]:focus{
   text-align: center;
   width: 100%;
   /*background-color: #ff0;*/
-  font-size: 1rem;
+  font-size: 2rem;
   margin: 0;
   padding: 1rem 0;
   /*border-bottom: 2px solid;*/
@@ -144,8 +154,8 @@ input[type="submit"]:focus{
 .row{
   display: flex;
   flex-direction: column;
-  width: 25%;
-  margin-bottom:  4rem;
+  width: 50%;
+  margin-bottom:  0.5rem;
   /*border-bottom: 2px dashed;*/
 }
 
@@ -159,17 +169,21 @@ input[type="submit"]:focus{
 }
 
 .cell{
-  padding: 1rem;
+  padding: 0.25rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .vol{
   /*width: 7%;*/
+  font-size: 2rem;
+  color: #0f0;
   box-sizing: border-box;
 }
 
 .title{
+  font-size: 2rem;
+
   /*width: 20%;*/
 }
 
@@ -178,9 +192,10 @@ input[type="submit"]:focus{
 }
 
 .tracklist{
+  font-size: 0.45rem;
+  column-count: 2;
   /*width: 40%;*/
 }
-
 .download{
   /*width: 10%;*/
 }
@@ -191,40 +206,28 @@ input[type="submit"]:focus{
 }
 
 @media (hover: hover){
-  input[type="submit"]:hover{
-    background-color: var(--text);
-    color: #fff;
+  input[type="submit"]:hover,
+  button:hover{
+    background-color: var(--text) !important;
+    cursor: pointer;
+    color: var(--bg);
   }
 }
 
 
 @media (max-width: 1270px){
   html{
-    font-size: 1vw;  
+    font-size: 2vw;  
   }
 }
 
 @media (max-width: 1000px){
   html{
-    font-size: 1.5vw;  
+    font-size: 2vw;  
   }
-  body{
-    margin:  1rem;
-  }
-  header{
-    padding:  1rem;
-  }
-  #logo{
-    height:  4rem;
-  }
-  .cell{
-    padding:  1rem;
-  }
-  .row{
-    width: 50%;
-  }
-  input{
-    width: 9rem;
+  .tracklist{
+    column-count: 1;
+    font-size: 0.75rem;
   }
 }
 
@@ -235,20 +238,23 @@ input[type="submit"]:focus{
     transform:  translate(-50%, 0%);
     
   }
-  #newsletter_signup_outer_wrapper{
-    margin-top: 2rem;
-    margin-left: 0;
-    margin-right: 4rem;
-  }
 }
 
 @media (max-width: 767px){
   html{
-    font-size: 2.5vw; 
+    font-size: 2.9vw; 
+  }
+
+  .tracklist{
+    font-size: 1rem;
+  }
+  .download{
+    font-size: 2rem;
   }
 
   .row{
     width: 100%;
+    margin-bottom: 1rem;
   }
 
   header input,
