@@ -12,6 +12,7 @@
 
 html{
   font-size: 2vw;  
+  background-color: var(--bg);
 }
 
 body{
