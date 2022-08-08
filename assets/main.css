@@ -13,10 +13,12 @@
 html{
   font-size: 2vw;  
   background-color: var(--bg);
+  background: var(--bg);
 }
 
 body{
   background-color: var(--bg);
+  background: var(--bg);
   margin: 0rem;
   line-height: 1.1;
   font-family: 'Raid XP', sans-serif;
