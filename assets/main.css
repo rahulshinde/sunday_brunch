@@ -20,12 +20,7 @@ body{
   margin: 0rem;
   line-height: 1.1;
   font-family: 'Raid XP', sans-serif;
-  font-weight: bold;
   color: var(--text);
-  background-size: 100%;
-  background-attachment: top;
-  background-position: top;
-  background-repeat: no-repeat;
   text-align: left;
 }
 
