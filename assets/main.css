@@ -1,17 +1,58 @@
-:root{
-  --bg: #333;
-  --text: #fff;
+@keyframes rotation1{
+  0% {
+    transform: scale(1.1) translate(-0.5rem,-0.5rem);
+  }
+  25% {
+    transform: scale(1.1) translate(-0.5rem,0.5rem);
+  }
+  50% {
+    transform: scale(1.1) translate(0.5rem,0.5rem);
+  }
+  75% {
+    transform: scale(1.1) translate(0.5rem,-0.5rem);
+  }
+
+  100% {
+    transform: scale(1.1) translate(-0.5rem,-0.5rem);
+  }
 }
 
-@font-face{
-  font-family: 'Raid XP';
-  font-weight: 400;
-  src: url("./fonts/RaidXP-Regular_web.woff2") format("woff2"),
-       url("./fonts/RaidXP-Regular_web.woff") format("woff");
+@keyframes rotation2{
+  0% {
+    transform: scale(1.1) translate(0.5rem,0.5rem);
+  }
+  25% {
+    transform: scale(1.1) translate(0.5rem,-0.5rem);
+  }
+  50% {
+    transform: scale(1.1) translate(-0.5rem,-0.5rem);
+  }
+  75% {
+    transform: scale(1.1) translate(-0.5rem,0.5rem);
+  }
+
+  100% {
+    transform: scale(1.1) translate(0.5rem,0.5rem);
+  }
+}
+
+@keyframes screen_scroll{
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-100% - 14rem));
+  }
+}
+
+:root{
+  --bg: #000;
+  --text: #ff0;
+  --sfs: 0.4rem;
 }
 
 html{
-  font-size: 2vw;  
+  font-size: 25px;  
   background-color: var(--bg);
   background: var(--bg);
 }
@@ -19,28 +60,130 @@ html{
 body{
   background-color: var(--bg);
   background: var(--bg);
+  font-family: sans-serif;
+  font-weight: 800;
   margin: 0rem;
   line-height: 1.1;
-  font-family: 'Raid XP', sans-serif;
   color: var(--text);
   text-align: left;
 }
 
+#scroll_text_container{
+  position: fixed;
+  z-index: 10;
+  font-family: monospace;
+  font-weight: normal;
+  width: calc(100% - 4rem);
+  left: 4rem;
+  top: 0;
+  overflow: hidden;
+  height: 80vh;
+}
+
+.scrolling_text{
+  position: absolute;
+  left: 100%;
+  display: block;
+  left: 100%;
+  width: 100%;
+  animation: screen_scroll linear infinite 10s;
+  text-shadow: 0px 0px 1px #000;
+}
+
+.scrolling_text:nth-child(1){
+  top: 1rem;
+  animation-duration: 15s;
+  color: #f0f;
+}
+
+.scrolling_text:nth-child(2){
+  top: 3rem;
+  animation-delay: 2s;
+  animation-duration: 10s;
+  color: #0ff;
+}
+
+.scrolling_text:nth-child(3){
+  top: 5rem;
+  animation-delay: 5s;
+  animation-duration: 7s;
+  color: #0f0;
+}
+
+.scrolling_text:nth-child(4){
+  top: 7rem;
+  animation-delay: 1s;
+  animation-duration: 7s;
+  color: #f00;
+}
+
+.scrolling_text:nth-child(5){
+  top: 12rem;
+  animation-delay: 4s;
+  animation-duration: 10s;
+  color: #00f;
+}
+
+.scrolling_text:nth-child(6){
+  top: 14rem;
+  animation-delay: 1s;
+  animation-duration: 13s;
+  color: #ff9f00;
+}
+
+#cover{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  animation: rotation1 ease-in-out infinite 20s;
+  transform: scale(1.1) translate(-0.5rem,-0.5rem)
+}
+#cover2{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  opacity: 0.5;
+  mix-blend-mode: luminosity;
+  animation: rotation2 ease-in-out infinite 20s;
+  transform: scale(1.1) translate(0.5rem,0.5rem);
+}
+
+#pt2{
+  position: fixed;
+  z-index: 3;
+  width: 15rem;
+  bottom: 5rem;
+  border-radius: 0.5rem;
+  transform: rotate(10deg);
+  left: 20%;
+  object-fit: contain;
+  box-shadow: 1rem 1rem 0.5rem rgb(0,0,0, 0.5);
+  mix-blend-mode: lighten;
+}
+
 a{
-  color: #ff0;
-  text-shadow: 2px 2px 2px var(--text);
+  color: var(--text);
 }
 
 header{
+  position: fixed;
+  transform: rotate(-90deg);
+  transform-origin: top left;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   text-align: center;
   align-items: center;
   margin-bottom: 0rem;
   padding: 0.25rem;
   box-sizing: border-box;
-  width: 100%;
-  justify-content: center;
+  top: 100%;
+  left: 0;
+  width: 100vh;
+  justify-content: space-between;
   z-index: 10;
 }
 
@@ -56,14 +199,18 @@ header{
 }
 
 main{
-  position: relative;
+  position: fixed;
+  width: calc(100% - 4rem);
+  left: 4rem;
+  bottom: 0;
+  overflow-x: scroll;
   z-index: 10;
+  font-size: var(--sfs);
 }
 
 button{
   color: var(--text);
   background-color: var(--bg);
-  font-family: 'Raid XP', sans-serif;
 }
 
 input{
@@ -71,10 +218,9 @@ input{
   color: var(--text);
   border: none;
   width: 10rem;
+  font-size: 1rem;
   border-bottom: 2px solid;
   color: var(--text);
-  font-family: 'Raid XP', sans-serif;
-  font-size: inherit;
   outline: none; 
   border-radius: 0;
   -webkit-border-radius: 0;
@@ -83,13 +229,12 @@ input{
 
 input[type="submit"]{
   border: 2px solid var(--text);
-  font-family: 'Raid XP', sans-serif;
   font-size: 1rem;
+  font-weight: 800;
   cursor: pointer;
 }
 
 input[type="submit"]:focus{
-  font-family: 'Raid XP', sans-serif;
   background-color: var(--text);
   color: var(--bg);
 }
@@ -108,11 +253,11 @@ input[type="submit"]:focus{
 
 #newsletter_signup_button{
   background-color: var(--bg);
-  font-family: 'Raid XP', sans-serif;
   font-size: 1rem;
   font-weight: bold;
   outline:  none;
   border:  2px solid var(--text);
+  margin: 0 1rem;
 }
 
 #about{
@@ -120,14 +265,17 @@ input[type="submit"]:focus{
 }
 
 #logo{
-  width: 100%;
+  width: 15rem;
+  padding: 0 2rem;
+  box-sizing: border-box;
   margin-bottom: 0.5rem;
   filter: drop-shadow(2px 2px 0 var(--text));
 }
 
 #catalogue{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
+  white-space: nowrap;
   width: 100%;
   box-sizing: border-box;
   /*border: 2px solid;*/
@@ -136,8 +284,7 @@ input[type="submit"]:focus{
 #catalogue h2{
   text-align: center;
   width: 100%;
-  /*background-color: #ff0;*/
-  font-size: 2rem;
+  font-size: var(--sfs);
   margin: 0;
   padding: 1rem 0;
   /*border-bottom: 2px solid;*/
@@ -152,8 +299,11 @@ input[type="submit"]:focus{
 
 .row{
   display: flex;
-  flex-direction: column;
-  width: 50%;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 10rem;
+  padding-right: 2rem;
+  box-sizing: border-box;
   margin-bottom:  0.5rem;
   /*border-bottom: 2px dashed;*/
 }
@@ -174,16 +324,16 @@ input[type="submit"]:focus{
 }
 
 .vol{
-  /*width: 7%;*/
-  font-size: 2rem;
-  color: #0f0;
+  width: 1rem;
+  font-size: var(--sfs);
+  color: var(--text);
   box-sizing: border-box;
 }
 
 .title{
-  font-size: 2rem;
-
-  /*width: 20%;*/
+  font-size: var(--sfs);
+  width: calc(100% - 1rem);
+  white-space: normal;
 }
 
 .w{
@@ -194,11 +344,12 @@ input[type="submit"]:focus{
 
 .tracklist,
 .w{
-  font-size: 0.45rem;
+  font-size: var(--sfs);
 }
 
 .tracklist{
-  column-count: 2;
+  column-count: 1;
+  width: 8rem;
   /*width: 40%;*/
 }
 .download{
