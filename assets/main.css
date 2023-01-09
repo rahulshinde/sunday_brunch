@@ -1,6 +1,6 @@
 :root{
-  --bg: rgb(20, 50, 0);
-  --text: #ff0;
+  --bg: #000;
+  --text: #fff;
   --sfs: 0.4rem;
 }
 
@@ -21,21 +21,9 @@ body{
   text-align: left;
 }
 
-#pt2{
-  position: fixed;
-  z-index: 3;
-  width: 15rem;
-  bottom: 5rem;
-  border-radius: 0.5rem;
-  transform: rotate(10deg);
-  left: 20%;
-  object-fit: contain;
-  box-shadow: 1rem 1rem 0.5rem rgb(0,0,0, 0.5);
-  mix-blend-mode: lighten;
-}
-
 a{
-  color: aqua;
+  color: red;
+  text-decoration: none;
 }
 
 header{
@@ -51,6 +39,8 @@ header{
   width: 100%;
   justify-content: space-between;
   z-index: 10;
+  position: sticky;
+  position: -webkit-sticky;
 }
 
 main{
@@ -138,14 +128,13 @@ input[type="submit"]:focus{
 }
 
 #catalogue h2{
-  text-align: center;
+  text-align: left;
   width: 100%;
   font-size: var(--sfs);
   margin: 0;
   padding: 1rem 0;
   /*border-bottom: 2px solid;*/
   font-weight: normal;
-  text-transform: uppercase;
 }
 
 .heading_container.row{
@@ -181,20 +170,15 @@ input[type="submit"]:focus{
 }
 
 .vol{
-  width: 2rem;
+  width: 100%;
   font-size: var(--sfs);
   color: var(--text);
   box-sizing: border-box;
 }
 
 .title{
-  font-size: 1.5rem;
-  width: calc(100% - 2rem);
-  transform: scale(0.5, 1);
+  width: 100%;
   white-space: normal;
-  font-family: cursive;
-  font-style: italic;
-  font-weight: bold;
   text-shadow: 0.1rem 0.1rem 0 #000;
 }
 
@@ -210,7 +194,7 @@ input[type="submit"]:focus{
 }
 
 .tracklist{
-  column-count: 1;
+  column-count: 2;
   width: 100%;
   /*width: 40%;*/
 }
@@ -267,11 +251,12 @@ input[type="submit"]:focus{
   .tracklist,
   .vol,
   .w{
+    column-count: 1;
     font-size: 1rem;
   }
   .title{
     width: 100%;
-    font-size: 3rem;
+    font-size: 1rem;
   }
   .download{
     font-size: 2rem;
