@@ -1,11 +1,12 @@
 :root{
-  --bg: #000;
-  --text: #fff;
-  --sfs: 0.4rem;
+  --bg: #fff;
+  --text: #000;
+  --sfs: 1rem;
+  --xsfs: 0.5rem;
 }
 
 html{
-  font-size: 25px;  
+  font-size: 40px;  
   background-color: var(--bg);
   background: var(--bg);
 }
@@ -18,7 +19,6 @@ body{
   margin: 0rem;
   line-height: 1.1;
   color: var(--text);
-  text-align: left;
 }
 
 a{
@@ -29,7 +29,6 @@ a{
 header{
   display: flex;
   flex-direction: column;
-  text-align: center;
   align-items: center;
   margin-bottom: 2rem;
   padding: 0.25rem;
@@ -37,10 +36,7 @@ header{
   top: 0;
   left: 0;
   width: 100%;
-  justify-content: space-between;
   z-index: 10;
-  position: sticky;
-  position: -webkit-sticky;
 }
 
 main{
@@ -112,7 +108,6 @@ input[type="submit"]:focus{
   padding: 0 2rem;
   box-sizing: border-box;
   margin-bottom: 0.5rem;
-  filter: drop-shadow(2px 2px 0 var(--text));
 }
 
 #catalogue{
@@ -121,14 +116,13 @@ input[type="submit"]:focus{
   align-items: baseline;
   width: 100%;
   box-sizing: border-box;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   box-sizing: border-box;
   /*border: 2px solid;*/
 }
 
 #catalogue h2{
-  text-align: left;
   width: 100%;
   font-size: var(--sfs);
   margin: 0;
@@ -145,9 +139,10 @@ input[type="submit"]:focus{
 .row{
   display: flex;
   flex-direction: row;
+  text-align: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 25%;
+  width: 100%;
   padding-right: 2rem;
   box-sizing: border-box;
   margin-bottom:  1.5rem;
@@ -179,13 +174,12 @@ input[type="submit"]:focus{
 .title{
   width: 100%;
   white-space: normal;
-  text-shadow: 0.1rem 0.1rem 0 #000;
 }
 
 .w{
   /*width: 15%;*/
-  display: inline-flex;
-  width: 50%;
+  width: 100%;
+  text-align: center;
 }
 
 .tracklist,
@@ -194,13 +188,22 @@ input[type="submit"]:focus{
 }
 
 .tracklist{
+/*  display: none;*/
+  font-size: var(--xsfs);
   column-count: 2;
   width: 100%;
+  opacity: 0.5;
   /*width: 40%;*/
 }
 .download{
   font-size: 1rem;
+  text-align: center;
+  width: 100%;
   /*width: 10%;*/
+}
+
+.download a{
+  border: 3px solid;
 }
 
 .mc-field-group,
