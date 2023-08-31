@@ -249,6 +249,7 @@ input[type="submit"]:focus{
 
   .vol{
     width: 5rem;
+    margin: 0 auto;
   }
 
   .tracklist,
@@ -291,12 +292,11 @@ input[type="submit"]:focus{
 }
 
 @media (max-width: 450px){
-  #newsletter_signup_outer_wrapper,
-  #about{
-    width: 100%;
-  }
   .clear{
     display: block;
     width: 100%;
+  }
+  #newsletter_signup_container{
+    width: calc(100vw - 2rem);
   }
 }
