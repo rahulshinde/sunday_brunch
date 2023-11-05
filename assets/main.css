@@ -1,8 +1,8 @@
 :root{
   --bg: #fff;
   --text: #000;
-  --sfs: 1rem;
-  --xsfs: 0.5rem;
+  --sfs: 0.5rem;
+  --xsfs: 0.3rem;
 }
 
 html{
@@ -18,24 +18,24 @@ body{
   font-weight: 800;
   margin: 0rem;
   line-height: 1.1;
-  color: var(--text);
 }
 
 a{
-  color: red;
+  color: #000;
   text-decoration: none;
 }
 
 header{
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 2rem;
-  padding: 0.25rem;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+  padding-top:0.5rem;
   box-sizing: border-box;
   top: 0;
   left: 0;
-  width: 100%;
+  margin-left: 0.5rem;
+  width: calc(100% - 1rem);
   z-index: 10;
 }
 
@@ -57,7 +57,7 @@ input{
   color: var(--text);
   border: none;
   width: 10rem;
-  font-size: 1rem;
+  font-size: var(--sfs);
   border-bottom: 2px solid;
   color: var(--text);
   outline: none; 
@@ -68,7 +68,7 @@ input{
 
 input[type="submit"]{
   border: 2px solid var(--text);
-  font-size: 1rem;
+  font-size: var(--sfs);
   font-weight: 800;
   cursor: pointer;
 }
@@ -76,6 +76,19 @@ input[type="submit"]{
 input[type="submit"]:focus{
   background-color: var(--text);
   color: var(--bg);
+}
+
+#logo_description_wrapper{
+  width: 33.33%;
+}
+
+#cover{
+  display: block;
+  position: sticky;
+  top: 4rem;
+  width: 60%;
+  margin: 0 auto 1rem auto;
+  z-index: 0;
 }
 
 #newsletter_signup_container{
@@ -90,24 +103,28 @@ input[type="submit"]:focus{
   display: none;
 }
 
+#newsletter_signup_outer_wrapper{
+  min-width: 50%;
+}
+
 #newsletter_signup_button{
   background-color: var(--bg);
-  font-size: 1rem;
+  font-size: var(--sfs);
   font-weight: bold;
   outline:  none;
   border:  2px solid var(--text);
-  margin: 0 1rem;
 }
 
 #about{
+  font-size: var(--sfs);
   margin-bottom:  0.5rem;
 }
 
 #logo{
-  width: 15rem;
-  padding: 0 2rem;
+  width: 4.8rem;
+  margin-right: 1rem;
+  padding: 0;
   box-sizing: border-box;
-  margin-bottom: 0.5rem;
 }
 
 #catalogue{
@@ -116,8 +133,8 @@ input[type="submit"]:focus{
   align-items: baseline;
   width: 100%;
   box-sizing: border-box;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
   box-sizing: border-box;
   /*border: 2px solid;*/
 }
@@ -139,13 +156,14 @@ input[type="submit"]:focus{
 .row{
   display: flex;
   flex-direction: row;
-  text-align: center;
+  /* text-align: center; */
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 100%;
-  padding-right: 2rem;
+  width: 33.33%;
+  padding-right: 0.5rem;
   box-sizing: border-box;
-  margin-bottom:  1.5rem;
+  margin-bottom:  0.5rem;
+  z-index: 10;
 /*  border-bottom: 2px dashed;*/
 }
 
@@ -159,7 +177,8 @@ input[type="submit"]:focus{
 }
 
 .cell{
-  padding: 0.25rem;
+  /* padding: 0.25rem; */
+  margin-bottom: 0.25rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -179,7 +198,7 @@ input[type="submit"]:focus{
 .w{
   /*width: 15%;*/
   width: 100%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .tracklist,
@@ -190,24 +209,25 @@ input[type="submit"]:focus{
 .tracklist{
 /*  display: none;*/
   font-size: var(--xsfs);
-  column-count: 2;
+  column-count: 3;
   width: 100%;
   opacity: 0.5;
   /*width: 40%;*/
 }
 .download{
-  font-size: 1rem;
-  text-align: center;
+  font-size: var(--sfs);
+  /* text-align: center; */
   width: 100%;
   /*width: 10%;*/
 }
 
 .download a{
-  border: 3px solid;
+  border-bottom: 3px solid;
 }
 
 .mc-field-group,
 .clear{
+  font-size: var(--sfs);
   display: inline-block;
 }
 
@@ -223,13 +243,7 @@ input[type="submit"]:focus{
 
 @media (max-width: 1270px){
   html{
-    font-size: 2vw;  
-  }
-}
-
-@media (max-width: 1000px){
-  html{
-    font-size: 2vw;  
+    font-size: 3vw;  
   }
 }
 
@@ -244,26 +258,26 @@ input[type="submit"]:focus{
 
 @media (max-width: 767px){
   html{
-    font-size: 2.9vw; 
+    font-size: 8vw; 
   }
 
-  .vol{
-    width: 5rem;
-    margin: 0 auto;
+  header{
+    flex-wrap: wrap;
+  }
+
+  #cover{
+    width: calc(100% - 1rem);
+    top: 5rem;
   }
 
   .tracklist,
   .vol,
   .w{
     column-count: 1;
-    font-size: 1rem;
   }
   .title{
     width: 100%;
-    font-size: 1rem;
-  }
-  .download{
-    font-size: 2rem;
+    text-align: left;
   }
 
   .row{
@@ -288,6 +302,11 @@ input[type="submit"]:focus{
   .mc-field-group,
   .clear{
     display: block;
+  }
+
+  #logo_description_wrapper,
+  #newsletter_signup_outer_wrapper{
+    width: calc(100vw - 2rem);
   }
 }
 
