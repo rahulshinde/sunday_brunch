@@ -7,13 +7,13 @@
 
 html{
   font-size: 40px;  
-  background-color: var(--bg);
-  background: var(--bg);
+  /* background-color: var(--bg); */
+  /* background: var(--bg); */
 }
 
 body{
   background-color: var(--bg);
-  background: var(--bg);
+  /* background: var(--bg); */
   font-family: sans-serif;
   font-weight: 800;
   margin: 0rem;
@@ -84,11 +84,13 @@ input[type="submit"]:focus{
 
 #cover{
   display: block;
-  position: sticky;
-  top: 4rem;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 60%;
   margin: 0 auto 1rem auto;
-  z-index: 0;
+  z-index: -1;
 }
 
 #newsletter_signup_container{
