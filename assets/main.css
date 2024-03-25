@@ -1,8 +1,8 @@
 :root{
-  --bg: #fff;
-  --text: #000;
+  --bg: #000;
+  --text: #fff;
   --sfs: 0.5rem;
-  --xsfs: 0.3rem;
+  --xsfs: 0.4rem;
 }
 
 html{
@@ -18,6 +18,17 @@ body{
   font-weight: 800;
   margin: 0rem;
   line-height: 1.1;
+  z-index: 1;
+}
+body:after{
+  content: '';
+  position: fixed;
+  width: 30%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: linear-gradient(to left, rgba(0,0,0,0), rgba(0,0,0,0.25));
+  z-index: 0;
 }
 
 a{
@@ -26,6 +37,7 @@ a{
 }
 
 header{
+  position: relative;
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
@@ -35,8 +47,10 @@ header{
   top: 0;
   left: 0;
   margin-left: 0.5rem;
-  width: calc(100% - 1rem);
+  width: calc(25% - 1rem);
   z-index: 10;
+  color: var(--text);
+  font-size: var(--xsfs);
 }
 
 main{
@@ -44,20 +58,22 @@ main{
   flex-wrap: wrap;
   bottom: 0;
   z-index: 10;
-  font-size: var(--sfs);
+  font-size: var(--xsfs);
+  color: var(--text);
 }
 
 button{
   color: var(--text);
-  background-color: var(--bg);
+  font-size: var(--xsfs);
+  background-color: transparent;
 }
 
 input{
-  background-color: var(--bg);
+  background-color: transparent;
   color: var(--text);
   border: none;
   width: 10rem;
-  font-size: var(--sfs);
+  font-size: var(--xsfs);
   border-bottom: 2px solid;
   color: var(--text);
   outline: none; 
@@ -68,7 +84,8 @@ input{
 
 input[type="submit"]{
   border: 2px solid var(--text);
-  font-size: var(--sfs);
+  background-color: transparent;
+  font-size: var(--xsfs);
   font-weight: 800;
   cursor: pointer;
 }
@@ -88,8 +105,7 @@ input[type="submit"]:focus{
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 60%;
-  margin: 0 auto 1rem auto;
+  width: 100%;
   z-index: -1;
 }
 
@@ -106,19 +122,18 @@ input[type="submit"]:focus{
 }
 
 #newsletter_signup_outer_wrapper{
-  min-width: 50%;
+  width: 100%;
 }
 
 #newsletter_signup_button{
-  background-color: var(--bg);
-  font-size: var(--sfs);
+  font-size: var(--xsfs);
   font-weight: bold;
   outline:  none;
   border:  2px solid var(--text);
 }
 
 #about{
-  font-size: var(--sfs);
+  font-size: var(--xsfs);
   margin-bottom:  0.5rem;
 }
 
@@ -133,7 +148,7 @@ input[type="submit"]:focus{
   display: flex;
   flex-wrap: wrap;
   align-items: baseline;
-  width: 100%;
+  width: 25%;
   box-sizing: border-box;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
@@ -143,7 +158,7 @@ input[type="submit"]:focus{
 
 #catalogue h2{
   width: 100%;
-  font-size: var(--sfs);
+  font-size: var(--xsfs);
   margin: 0;
   padding: 1rem 0;
   /*border-bottom: 2px solid;*/
@@ -161,7 +176,7 @@ input[type="submit"]:focus{
   /* text-align: center; */
   justify-content: space-between;
   flex-wrap: wrap;
-  width: 33.33%;
+  width: 100%;
   padding-right: 0.5rem;
   box-sizing: border-box;
   margin-bottom:  0.5rem;
@@ -187,7 +202,7 @@ input[type="submit"]:focus{
 
 .vol{
   width: 100%;
-  font-size: var(--sfs);
+  font-size: var(--xsfs);
   color: var(--text);
   box-sizing: border-box;
 }
@@ -195,6 +210,7 @@ input[type="submit"]:focus{
 .title{
   width: 100%;
   white-space: normal;
+  font-size: var(--xsfs);
 }
 
 .w{
@@ -205,31 +221,31 @@ input[type="submit"]:focus{
 
 .tracklist,
 .w{
-  font-size: var(--sfs);
+  font-size: var(--xsfs);
 }
 
 .tracklist{
 /*  display: none;*/
   font-size: var(--xsfs);
-  column-count: 3;
+  column-count: 1;
   width: 100%;
-  opacity: 0.5;
   /*width: 40%;*/
 }
 .download{
-  font-size: var(--sfs);
+  font-size: var(--xsfs);
   /* text-align: center; */
   width: 100%;
   /*width: 10%;*/
 }
 
 .download a{
-  border-bottom: 3px solid;
+  color: var(--bg);
+  background-color: yellow;
 }
 
 .mc-field-group,
 .clear{
-  font-size: var(--sfs);
+  font-size: var(--xsfs);
   display: inline-block;
 }
 
@@ -268,8 +284,8 @@ input[type="submit"]:focus{
   }
 
   #cover{
-    width: calc(100% - 1rem);
     top: 5rem;
+    object-fit: cover;
   }
 
   .tracklist,
@@ -277,7 +293,8 @@ input[type="submit"]:focus{
   .w{
     column-count: 1;
   }
-  .title{
+  .title,
+  #catalogue{
     width: 100%;
     text-align: left;
   }
