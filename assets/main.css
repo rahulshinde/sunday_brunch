@@ -284,8 +284,8 @@ input[type="submit"]:focus{
   }
 
   #cover{
-    top: 5rem;
-    object-fit: cover;
+    top: 11rem;
+    width: 180vw;
   }
 
   .tracklist,
